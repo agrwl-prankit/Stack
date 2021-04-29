@@ -39,8 +39,9 @@ public class DynamicStack {
     // if stack has element less the half of size then it will decrease by 2
     private void shrink() {
         int length = size();
-        if (length <= capacity / 4) {
+        if (length <= capacity/2) {
             capacity /= 2;
+            if (capacity < 2) capacity = 2;
             int[] newStack = new int[capacity];
             System.arraycopy(stack, 0, newStack, 0, length);    // copy the element of stack1 into newStack
             stack = newStack;   // change the reference of stack1 to newStack

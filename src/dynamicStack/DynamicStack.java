@@ -47,6 +47,16 @@ public class DynamicStack {
         }
     }
 
+    // peek simple returns the last inserted element
+    public void peek() {
+        System.out.println(stack[top] + " is peek element");
+    }
+
+    public void show() {
+        for (int i = 0; i <= top; i++) System.out.print(stack[i] + " ");
+        System.out.println("");
+    }
+
     public int size() {
         return top + 1;
     }

@@ -35,6 +35,19 @@ public class StackUsingArray {
         System.out.println(stack[top] + " is peek element");
     }
 
+    public void show(){
+        if (isEmpty()){
+            System.out.println("Stack is empty");
+            return;
+        }
+        for (int i=0; i<=top; i++) System.out.print(stack[i] + " ");
+        System.out.println("");
+    }
+
+    public int size(){
+        return top;
+    }
+
     private boolean isFull() {
         return top == stack.length-1;
     }

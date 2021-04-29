@@ -24,6 +24,29 @@ public class DynamicStack {
         capacity *= 2;  // capacity will also increase
     }
 
+    // pop removed the last inserted element
+    public void pop() {
+        if (top == -1) {      // check underflow condition
+            System.out.println("Stack is already empty");
+            return;
+        }
+        int temp = stack[top];  // store the last inserted element
+        stack[top--] = 0;
+        shrink();
+        System.out.println(temp + " removed successfully");
+    }
+
+    // if stack has element less the half of size then it will decrease by 2
+    private void shrink() {
+        int length = size();
+        if (length <= capacity / 4) {
+            capacity /= 2;
+            int[] newStack = new int[capacity];
+            System.arraycopy(stack, 0, newStack, 0, length);    // copy the element of stack1 into newStack
+            stack = newStack;   // change the reference of stack1 to newStack
+        }
+    }
+
     public int size() {
         return top + 1;
     }

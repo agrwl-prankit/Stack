@@ -6,10 +6,37 @@ It is used to retrieve recently used objects, from a cache.
 
 # Implementation
 
-## Methods
+## Stack Using Array
 * push
 * pop
 * peek
 * show
 * isEmpty
+* isFull
 * size
+
+
+## Dynamic Stack or Growable Array-Based Stack
+* push
+* expand
+* pop
+* shrink
+* peek
+* show
+* size
+
+## Stack using Singly Linked List
+* push
+* pop
+* peek
+* show
+* size
+* isEmpty
+
+## Stack using Doubly Linked List
+* push
+* pop
+* peek
+* show
+* size
+* isEmpty
